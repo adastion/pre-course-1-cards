@@ -7,10 +7,10 @@
 }
 
 body {
-  background-color: aliceblue;
-  font-family: "lato", sans-serif;
+  background-color: white;
+  font-family: "Lato", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-style: normal;
 }
 
 ul {
@@ -21,10 +21,46 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  font-family: Lato;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+h1 + h2 {
+  margin-top: 42px;
+}
+
+h2 + ul {
+  margin-top: 20px;
+}
+
+h4 {
+  font-size: 20;
+  font-weight: 800;
+}
+
 .wrap {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 64px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 12px;
+  height: 100%;
+}
+
+.content li {
+  max-width: 474px;
+  min-height: 100%;
 }
 
 .card-wrapper {
@@ -34,6 +70,12 @@ img {
   border-radius: 12px;
   padding: 25px 48px;
   width: 100%;
+}
+
+.card-wrapper h4 {
+  font-size: 28px;
+  margin-top: 28px;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -67,11 +109,45 @@ img {
   right: 25px;
 }
 
-.card h2 {
+.card h3 {
   font-size: 20px;
   font-weight: 700;
 }
 
-.card h3 {
-  font-size: 28px;
+.card p {
+  font-size: 14px;
+}
+
+.padlock {
+  display: flex;
+  gap: 10px;
+  color: #e74a51;
+  margin-top: 20px;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.transaction__icon {
+  border-radius: 10px;
+  background-color: #e3f6fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 48px;
+}
+
+.transaction__info {
+  flex-grow: 1;
 }
