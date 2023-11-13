@@ -8,4 +8,70 @@
 
 body {
   background-color: aliceblue;
+  font-family: "lato", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dfdfdf;
+  border-radius: 12px;
+  padding: 25px 48px;
+  width: 100%;
+}
+
+.card {
+  width: 376px;
+  height: 204px;
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+  text-transform: capitalize;
+  /* background: linear-gradient(-175deg, #9C2CF3, #3A6FF9);
+  background: linear-gradient(-175deg, #F32CC7, #27A6AE);
+  background: linear-gradient(-175deg, #F3972C, #E333C7); */
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card > div:last-child {
+  justify-content: end;
+}
+
+.card img {
+  position: absolute;
+  top: 28px;
+  right: 25px;
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card h3 {
+  font-size: 28px;
 }
