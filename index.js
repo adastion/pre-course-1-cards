@@ -167,7 +167,7 @@ for (let numCard = 0; numCard < userData.userCards.length; numCard++) {
   } 
                                                                 alt=logo-card-network-type/>`);
   document.write(
-    `<span>${card.expirationMonth} / ${card.expirationYear}</span>`
+    `<span>${card.expirationMonth} / ${card.expirationYear % 100}</span>`
   );
   document.write(`</div>`);
 
@@ -199,7 +199,7 @@ for (let numCard = 0; numCard < userData.userCards.length; numCard++) {
     document.write(`<div class='transaction__info'>`);
     document.write(`<h5>${transaction.description}</h5>`);
     document.write(
-      `<p>${transaction.date.getMonth()} / ${transaction.date.getFullYear()}</p>`
+      `<p>${months[transaction.date.getMonth()]} ${transaction.date.getDay()} , ${transaction.date.getFullYear() % 100}</p>`
     );
     document.write(`</div>`);
 
@@ -208,7 +208,7 @@ for (let numCard = 0; numCard < userData.userCards.length; numCard++) {
 
     document.write(
       `<span style='color: ${positiveDebitingBalance};'>${
-        transaction.amount > 0 ? "+" + transaction.amount : transaction.amount
+        transaction.amount > 0 ? "+ " + currencySign + transaction.amount : "- " + currencySign + -transaction.amount
       }</span>`
     );
     document.write(`</li>`);
