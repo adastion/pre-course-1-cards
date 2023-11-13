@@ -92,6 +92,7 @@ h5 {
   color: white;
   position: relative;
   text-transform: capitalize;
+  overflow: hidden;
   /* background: linear-gradient(-175deg, #9C2CF3, #3A6FF9);
   background: linear-gradient(-175deg, #F32CC7, #27A6AE);
   background: linear-gradient(-175deg, #F3972C, #E333C7); */
@@ -121,6 +122,32 @@ h5 {
 .card p {
   font-size: 14px;
 }
+
+.card > * {
+  z-index: 5;
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  width: 330px;
+  height: 220px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.card::before {
+  top: 106px;
+  right: 180px;
+}
+
+.card::after {
+  left: 173px;
+  bottom: 124px;
+}
+
 
 .padlock {
   display: flex;
