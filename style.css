@@ -1,25 +1,12 @@
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('styles/base.css');
+@import url('styles/header.css');
+@import url('styles/container.css');
+@import url('styles/cards.css');
+@import url('styles/card.css');
+@import url('styles/padlock.css');
+@import url('styles/transaction.css');
 
-body {
-  background-color: white;
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-style: normal;
-}
 
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-}
 
 h1 {
   font-family: Lato;
@@ -49,137 +36,7 @@ h5 {
   font-weight: 800;
 }
 
-.wrap {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 64px;
-}
-
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px 12px;
-  height: 100%;
-}
-
-.content li {
-  max-width: 474px;
-  min-height: 100%;
-}
-
-.card-wrapper {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #dfdfdf;
-  border-radius: 12px;
-  padding: 25px 48px;
-  width: 100%;
-}
-
-.card-wrapper h4 {
-  font-size: 28px;
-  margin-top: 28px;
+.transaction-title {
+  margin-top: 24px;
   margin-bottom: 20px;
-}
-
-.card {
-  width: 376px;
-  height: 204px;
-  border-radius: 12px;
-  padding: 28px 24px;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  position: relative;
-  text-transform: capitalize;
-  overflow: hidden;
-  /* background: linear-gradient(-175deg, #9C2CF3, #3A6FF9);
-  background: linear-gradient(-175deg, #F32CC7, #27A6AE);
-  background: linear-gradient(-175deg, #F3972C, #E333C7); */
-}
-
-.card > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card > div:last-child {
-  justify-content: end;
-}
-
-.card img {
-  position: absolute;
-  top: 28px;
-  right: 25px;
-}
-
-.card h3 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.card p {
-  font-size: 14px;
-}
-
-.card > * {
-  z-index: 5;
-}
-
-.card::before,
-.card::after {
-  content: '';
-  position: absolute;
-  width: 330px;
-  height: 220px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.card::before {
-  top: 106px;
-  right: 180px;
-}
-
-.card::after {
-  left: 173px;
-  bottom: 124px;
-}
-
-
-.padlock {
-  display: flex;
-  gap: 10px;
-  color: #e74a51;
-  margin-top: 20px;
-}
-
-.transaction-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.transaction {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  text-transform: capitalize;
-}
-
-.transaction__icon {
-  border-radius: 10px;
-  background-color: #e3f6fe;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  width: 48px;
-}
-
-.transaction__info {
-  flex-grow: 1;
 }

@@ -1,0 +1,29 @@
+.transaction {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+.transaction__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-transform: capitalize;
+}
+
+.transaction__icon {
+  border-radius: 10px;
+  background-color: #e3f6fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 48px;
+}
+
+.transaction__info {
+  flex-grow: 1;
+}
