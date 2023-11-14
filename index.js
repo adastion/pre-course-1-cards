@@ -171,7 +171,12 @@ document.write(`<div class='container'>`);
               document.write(`</div>`);
             document.write(`</div>`);
 
-            document.write(`<div class='padlock'>${card.isActive ? '<img src="images/icon-padlock.svg" alt="icon"/>' + "<span>Card is temporarily blocked</span>" : ""} </div>`);
+            document.write(`<div class='padlock'>
+                            ${card.isActive 
+                              ? '<img src="images/icon-padlock.svg" alt="icon"/>' 
+                              + "<span>Card is temporarily blocked</span>" 
+                              : ""}
+                            </div>`);
             document.write(`<h4 class='transaction-title'>History Transactions</h4>`);
             document.write(`<ul class='transaction'>`);
                 for (let numTransaction = 0; numTransaction < card.historyTransactions.length; numTransaction++) {
@@ -182,16 +187,26 @@ document.write(`<div class='container'>`);
                       transaction.amount > 0
                         ? pathPictures.balance.positive
                         : pathPictures.balance.debiting;
-                    document.write(`<div class='transaction__icon'><img src=${iconPositiveDebiting} alt='icon'/></div>`);
+                    document.write(`<div class='transaction__icon'>
+                                      <img src=${iconPositiveDebiting} alt='icon'/>
+                                    </div>`);
                     document.write(`<div class='transaction__info'>`);
                       document.write(`<h5>${transaction.description}</h5>`);
-                      document.write(
-                        `<p>${months[+transaction.date.getMonth()]} ${transaction.date.getDay()} , ${transaction.date.getFullYear() % 100}</p>`
-                      );
+                      document.write(`<p>
+                                        ${months[+transaction.date.getMonth()]} 
+                                        ${transaction.date.getDay()}, 
+                                        ${transaction.date.getFullYear() % 100}
+                                      </p>`
+                                    );
                     document.write(`</div>`);
-                      let positiveDebitingBalance =
-                        transaction.amount > 0 ? "#2DD683" : "#E74A51";
-                      document.write(`<span style='color: ${positiveDebitingBalance};'>${transaction.amount > 0 ? "+ " + currencySign + transaction.amount : "- " + currencySign + -transaction.amount}</span>`);
+                      let positiveDebitingBalance = transaction.amount > 0
+                                                   ? "#2DD683" 
+                                                   : "#E74A51";
+                      document.write(`<span style='color: ${positiveDebitingBalance};'>
+                                          ${transaction.amount > 0 
+                                          ? "+ " + currencySign + transaction.amount 
+                                          : "- " + currencySign + -transaction.amount}
+                                      </span>`);
                   document.write(`</li>`);
                 }
               document.write(`</ul>`);
