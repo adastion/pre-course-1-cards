@@ -79,8 +79,13 @@
   justify-content: space-between;
 }
 
-.card__item:nth-child(2) {
-  margin-top: 40px;
+.card__item h4 {
+  font-size: 28px;
+}
+
+.card__item p:nth-of-type(1) {
+  margin-top: 15px;
+  opacity: 0.5;
 }
 
 
