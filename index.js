@@ -18,32 +18,34 @@ const contentCards = createMyElement("div", rootElement, "container")
 const titleCards = createMyElement("h2", contentCards, "", "My Cards")
 
 //rendering cards list
+const cardsList = createMyElement("ul", contentCards, "cards")
+for (let i = 0; i < userData.userCards.length; i++) {
+  const cardData = userData.userCards[i]
+  //  renderCrad(cardData, cardsList)
+  
+    const cardItem = createMyElement("li", cardsList, "card")
+    const cardContent = createMyElement("section", cardItem, "card__content")
+    let colorCard = "";
+    let currencySign = "";
+    
+    switch (cardData.currencyType) {
+      case "USD":
+        currencySign = "$";
+        colorCard = "linear-gradient(-175deg, #9C2CF3, #3A6FF9)";
+        break;
+        case "EUR":
+          currencySign = "€";
+          colorCard = "linear-gradient(-175deg, #F32CC7, #27A6AE)";
+          break;
+          case "GBP":
+            currencySign = "£";
+            colorCard = "linear-gradient(-175deg, #F3972C, #E333C7)";
+            break;
+          }
+          const card = createMyElement("div", cardContent, "card__card")
+          card.style.background = colorCard
+}
 
-
-
-//     document.write(`<ul class='cards'>`);
-//       for (let numCard = 0; numCard < userData.userCards.length; numCard++) {
-//         let card = userData.userCards[numCard];
-
-//         document.write(`<li class-'card'>`);
-//           document.write(`<section class='card__content'>`);
-//             let colorCard = "";
-//             let currencySign = "";
-
-//             switch (card.currencyType) {
-//               case "USD":
-//                 currencySign = "$";
-//                 colorCard = "linear-gradient(-175deg, #9C2CF3, #3A6FF9)";
-//                 break;
-//               case "EUR":
-//                 currencySign = "€";
-//                 colorCard = "linear-gradient(-175deg, #F32CC7, #27A6AE)";
-//                 break;
-//               case "GBP":
-//                 currencySign = "£";
-//                 colorCard = "linear-gradient(-175deg, #F3972C, #E333C7)";
-//                 break;
-//             }
 //             document.write(`<div class='card__card' style='background: ${colorCard};'>`);
 //               document.write(`<div class='card__item'>`);
 //                 document.write(`<h3>${card.type} card</h3>`);
