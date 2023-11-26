@@ -1,14 +1,12 @@
 import { createMyElement } from "../create_elements.js"
-import { renderBlockedCard } from "./renderBlockedCard.js"
 
-export function renderCard (cardData, cardsList, pathPictures) {
+export function renderCard (cardData, cardsList, pathPictures, blockedCard) {
   const cardBlock = createMyElement("li", cardsList, "card")
   const cardContent = createMyElement("section", cardBlock, "card__content")
   let colorCard;
   let currencySign;
-  
-  // switchCase()
 
+// switchCase
   switch (cardData.currencyType) {
     case "USD":
       currencySign = "$";
@@ -23,6 +21,7 @@ export function renderCard (cardData, cardsList, pathPictures) {
           colorCard = "bg-3";
           break;
         }
+
   // card
   const card = createMyElement("div", cardContent, "card__card")
     card.classList.add(colorCard)
@@ -35,6 +34,5 @@ export function renderCard (cardData, cardsList, pathPictures) {
   const networkTypeLogo = createMyElement("img", cardItem2, "", "", `${cardData.networkType === "Mastercard" ? pathPictures.master : pathPictures.visa}`)
     networkTypeLogo.alt = "logo-card-network-type"
   const cardDate = createMyElement("span", cardItem2, "", `${cardData.expirationMonth} / ${cardData.expirationYear % 100}`)
-
-  renderBlockedCard(cardData, cardContent)
+  blockedCard(cardData, cardContent)
 }

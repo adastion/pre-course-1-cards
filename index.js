@@ -1,6 +1,7 @@
 import { getPathData, getMonths, getUserData } from './src/data.js'
 import { createMyElement } from './src/create_elements.js'
 import { renderCard } from './src/components/card_block.js'
+import { blockedCard } from "./src/components/blockedCard.js"
 
 // variables
 const pathPictures = getPathData()
@@ -22,7 +23,7 @@ const titleCards = createMyElement("h2", contentCards, "", "My Cards")
 const cardsList = createMyElement("ul", contentCards, "cards")
   for (let i = 0; i < userData.userCards.length; i++) {
     const cardData = userData.userCards[i]
-    renderCard(cardData, cardsList, pathPictures)
+    renderCard(cardData, cardsList, pathPictures, blockedCard)
   }
 
 

@@ -1,6 +1,6 @@
 import { createMyElement } from "../create_elements.js";
 
-export function renderBlockedCard(cardData, parentElement) {
+export function blockedCard(cardData, parentElement) {
   let content;
   if (cardData.isActive) {
     const blockingMessage = createMyElement("div", parentElement, "padlock")
