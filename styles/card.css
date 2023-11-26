@@ -31,6 +31,18 @@
   overflow: hidden;
 }
 
+.card__card.bg-1 {
+  background: linear-gradient(-175deg, #9C2CF3, #3A6FF9);
+}
+
+.card__card.bg-2 {
+  background: linear-gradient(-175deg, #F32CC7, #27A6AE);
+}
+
+.card__card.bg-3 {
+  background: linear-gradient(-175deg, #F3972C, #E333C7);
+}
+
 .card__card img {
   position: absolute;
   top: 28px;
