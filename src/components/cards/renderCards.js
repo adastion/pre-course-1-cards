@@ -29,7 +29,7 @@ export function renderCard (cardData, cardsList, pathPictures, months) {
     card.classList.add(colorCard)
   const cardItem = createMyElement("div", card, "card__item")
   const titleCardType = createMyElement("h3", cardItem, "", `${cardData.type} card`)
-  const titleBalance = createMyElement("p", cardItem, "", "Current Balance")
+  const titleBalance = createMyElement("p", cardItem, "card__title-balans", "Current Balance")
   const balance = createMyElement("h4", cardItem, "", `${currencySign}${cardData.currentBalance}`)
   const cardNumber = createMyElement("p", cardItem, "", cardData.cardNumber)
   const cardItem2 = createMyElement("div", card, "card__item")

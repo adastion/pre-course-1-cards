@@ -1,6 +1,6 @@
 import { getPathData, getMonths, getUserData } from './src/data.js'
 import { createMyElement } from './src/create_elements.js'
-import { renderCard } from './src/components/cards/card_block.js'
+import { renderCard } from './src/components/cards/renderCards.js'
 
 // variables
 const pathPictures = getPathData()
