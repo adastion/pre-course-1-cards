@@ -1,12 +1,14 @@
-import { createMyElement } from "../create_elements.js"
+import { createMyElement } from "../../create_elements.js"
+import { blockedCard } from "../blockedCard.js"
+import { renderTransactions } from "../transactions/renderTransactions.js"
 
-export function renderCard (cardData, cardsList, pathPictures, blockedCard) {
+export function renderCard (cardData, cardsList, pathPictures, months) {
   const cardBlock = createMyElement("li", cardsList, "card")
   const cardContent = createMyElement("section", cardBlock, "card__content")
+  // switchCase
   let colorCard;
   let currencySign;
 
-// switchCase
   switch (cardData.currencyType) {
     case "USD":
       currencySign = "$";
@@ -34,5 +36,6 @@ export function renderCard (cardData, cardsList, pathPictures, blockedCard) {
   const networkTypeLogo = createMyElement("img", cardItem2, "", "", `${cardData.networkType === "Mastercard" ? pathPictures.master : pathPictures.visa}`)
     networkTypeLogo.alt = "logo-card-network-type"
   const cardDate = createMyElement("span", cardItem2, "", `${cardData.expirationMonth} / ${cardData.expirationYear % 100}`)
-  blockedCard(cardData, cardContent)
+    blockedCard(cardData, cardContent)
+    renderTransactions(cardData, cardContent, currencySign, pathPictures, months)
 }

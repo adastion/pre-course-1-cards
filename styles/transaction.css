@@ -27,3 +27,11 @@
 .transaction__info {
   flex-grow: 1;
 }
+
+.amount-positive {
+  color: #2dd683;
+}
+
+.amount-debiting {
+  color: #e74a51;
+}

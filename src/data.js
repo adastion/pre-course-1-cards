@@ -3,6 +3,7 @@ export function getPathData() {
     logo: "src/assets/images/logo.svg",
     master: "src/assets/images/mastercard-logo.svg",
     visa: "src/assets/images/visa-logo.svg",
+    padlock: "src/assets/images/icon-padlock.svg",
     balance: {
       positive: "src/assets/images/icon-refill.svg",
       debiting: "src/assets/images/icon-debiting.svg",
